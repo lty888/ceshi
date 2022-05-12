@@ -14,8 +14,7 @@ async def jd_cmd(context):
     except ValueError:
         return await context.edit("[jd_cmd] " + lang("msg_ValueError"))
     try:
-        data = (await client.post("https://api.zhezhe.cf/jd/jcommand", headers={'Content-Type': 'application/json;charset=utf-8',
-		        'Authorization': 'Bearer '+ 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NzU5NjIzNjQxLCJpYXQiOjE2NTIzNjg1MDIsImV4cCI6MTY4MzkwNDUwMn0.SGi5tp-G2GxL8C-E_crCo7Eyk_rd3rRfRBB0Zus60bM'
+        data = (await client.post("https://api.zhezhe.cf/jd/jcommand", headers={'Content-Type': 'application/json;charset=utf-8','Authorization': 'Bearer '+ 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NzU5NjIzNjQxLCJpYXQiOjE2NTIzNjg1MDIsImV4cCI6MTY4MzkwNDUwMn0.SGi5tp-G2GxL8C-E_crCo7Eyk_rd3rRfRBB0Zus60bM'
 },json={"code": text})).json()
     except:
         return await context.edit("[jd_cmd] 网络错误！")
